@@ -14,17 +14,6 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 logging.basicConfig(level=logging.INFO)
 
-# ============== ВАШИ КЛЮЧИ (из переменных окружения Railway) ==============
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY")
-SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
-ADMIN_IDS = [int(x) for x in os.getenv("ADMIN_IDS", "6407261611").split(",")]
-
-if not BOT_TOKEN or not SUPABASE_URL or not SUPABASE_SERVICE_KEY:
-    raise ValueError("Missing required environment variables!")
-# ========================================================
-
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
 scheduler = AsyncIOScheduler()
