@@ -14,14 +14,6 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 logging.basicConfig(level=logging.INFO)
 
-# ============== ВАШИ КЛЮЧИ ==============
-BOT_TOKEN = "8856543463:AAERObVD7O8yZxIIb2oUMGkUje5UqZVqt9g"
-SUPABASE_URL = "https://yrzyskhbgwbamjlsbhos.supabase.co"
-SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlyenlza2hiZ3diYW1qbHNiaG9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE5Mjg1NjMsImV4cCI6MjA5NzUwNDU2M30.eO3DG9429EXzAGZzjNbbPqhTeMsRCEm-I_agVpotPWM"
-SUPABASE_SERVICE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlyenlza2hiZ3diYW1qbHNiaG9zIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MTkyODU2MywiZXhwIjoyMDk3NTA0NTYzfQ.iiBTSn4nxgTEPvclA9ndpH8RfoUGj6UdWm-GK0zb6zk"
-ADMIN_IDS = [6407261611]
-# ========================================================
-
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
 scheduler = AsyncIOScheduler()
